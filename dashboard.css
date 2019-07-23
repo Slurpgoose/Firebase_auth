@@ -9,7 +9,6 @@ input {
   line-height: 1.65;
 }
 
-
 .navbar {
   height: 10vh;
   border-bottom: 1px solid white;
@@ -20,6 +19,14 @@ input {
   height: 120px;
 }
 
+.navbar-brand #logo {
+  color: white;
+  font-size: 1.8vw;
+  letter-spacing: 4px;
+  font-family: "Monoton", cursive;
+  height: 300px;
+  margin-top: 10%;
+}
 .navbar img {
   padding-top: 20px;
   width: 200px;
@@ -53,14 +60,11 @@ body {
 }
 
 /* Youtube CSS */
-#content, #authorize-button, #signout-button {
-  display: none
+#content,
+#authorize-button,
+#signout-button {
+  display: none;
 }
-
-
-
-
-
 
 /* --------------------SPOTIFY SECTION------------- */
 .spotify-card {
@@ -68,13 +72,14 @@ body {
   color: #fff;
   /* width: 20px; */
 }
-form{
+form {
   text-align: center;
+  margin: 1em;
 }
 .container-1 {
   text-align: center;
 }
-.SP{
+.SP {
   text-align: center;
   font-size: 20px;
   padding-bottom: 20px;
@@ -111,22 +116,22 @@ form{
   background: rgb(93, 1, 89); 
 }
 
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(46, 1, 44); 
 }
 
+form #searchname{
+  margin: 1em;
+}
 
+.navigation{
+  margin: 1em;
+  text-align: center;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.previous{
+  margin-right: 1em;
+}
 /* ------------------------------------------------ */

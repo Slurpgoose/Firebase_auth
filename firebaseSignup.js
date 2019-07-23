@@ -1,6 +1,7 @@
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+//Get Element so we can add an eventlistener
 let submitForm = document.getElementById("signUpForm");
 
 // Reference msessages collection
@@ -8,11 +9,14 @@ var messagesRef = firebase.database().ref("user");
 
 submitForm.addEventListener("submit", e => {
   e.preventDefault();
+
+  // Get elements
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
   let password = document.getElementById("pass").value;
   let phoneNumber = document.getElementById("phone").value;
 
+  // this function will create an user using email and password and it will also log them in, which will return a promise and  allows you to resolve the user's data
   firebase
     .auth()
     .createUserWithEmailAndPassword(email, password)
@@ -25,11 +29,11 @@ submitForm.addEventListener("submit", e => {
       console.log(errorCode);
     })
     .then(function() {
-      document.location.href = "dashboard.html";
+      document.location.href = "http://159.203.185.216:8899/animation.html";
     });
 
-  //call the function when the form gets submitted
-  //Save message
+  //function will be call when the form gets submitted
+  //Save message, the user's data will be saved in firebase database
 
   saveMessage(name, email, password, phoneNumber);
 
@@ -45,7 +49,7 @@ submitForm.addEventListener("submit", e => {
 });
 
 // save the msg to firebase
-//sending an object of data to firebase to our msg collection
+//send an object of data to firebase database
 function saveMessage(name, email, password, phoneNumber) {
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
