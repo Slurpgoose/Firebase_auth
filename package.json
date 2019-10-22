@@ -1,19 +1,34 @@
 {
-  "name": "firebase",
+  "name": "spotcloud",
   "version": "1.0.0",
-  "description": "firebase",
-  "main": "animation.js",
+  "description": "create playlists across spotify and youtube",
+  "main": "keys.js",
   "scripts": {
-    "start": "node animation.js"
-},
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Slurpgoose/Firebase_auth.git"
+    "url": "git+https://github.com/Slurpgoose/SoundGoodMusic.git"
   },
-  "author": "",
+  "author": "Antony Tsygankov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Slurpgoose/Firebase_auth/issues"
+    "url": "https://github.com/Slurpgoose/SoundGoodMusic/issues"
   },
-  "homepage": "https://github.com/Slurpgoose/Firebase_auth#readme"
+  "homepage": "https://github.com/Slurpgoose/SoundGoodMusic#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "connect-pg-simple": "^6.0.1",
+    "crypto": "^1.0.1",
+    "ejs": "^2.7.1",
+    "express": "^3.2.6",
+    "express-session": "^1.16.2",
+    "fs": "0.0.1-security",
+    "method-override": "^3.0.0",
+    "nodemailer": "^6.3.0",
+    "path": "^0.12.7",
+    "pg-promise": "^9.1.4"
+  }
 }
