@@ -32,6 +32,10 @@ app.use(express.bodyParser());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 
+ app.get("/home2", (req, res, next) => {
+    res.render("animation2");
+  });
+
 
   app.get("/", (req, res, next) => {
     res.redirect("/home");
